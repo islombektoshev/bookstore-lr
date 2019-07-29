@@ -1,0 +1,43 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+hr {
+    border-width: 2px;
+    border-color: #0f0f0f;
+    border-radius: 50%;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.box {
+    margin: auto;
+}
+
+.home-headline {
+    padding: 8px 24px;
+    margin: auto auto;
+    text-align: center;
+    width: 250px;
+
+    background-color: #222222;
+    color: #fff;
+}
+
+.myaccount-tab-icon {
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background: rgba(0, 0, 0, .2);
+    box-shadow:  0 4px  8px 0 rgba(0, 0, 0, .2)
+    , 0 6px 20px 0 rgba(0, 0, 0, .1);
+}
+.myaccount-tab-icon:hover{
+    box-shadow:  0 4px  8px 0 rgba(0, 0, 0, .1)
+    , 0 6px 20px 0 rgba(0, 0, 0, .1);
+}

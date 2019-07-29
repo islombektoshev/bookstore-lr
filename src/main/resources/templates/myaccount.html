@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><title>MY ACCOUNT</title></head>
+<head th:replace="/layout::head"></head>
+<body>
+<div th:replace="/layout::navigation-bar"></div>
+
+
+<div class="container">
+
+    <!--<div class="account-logo-container" style="width: 100%">-->
+    <!--<div class="account-logo" style="margin: auto; width: 145px;">-->
+    <!--<span class="fa fa-user-o" style="font-size: 12em; color: #000 "></span>-->
+    <!--</div>-->
+    <!--<div class="title" style="text-align: center; font-size: 3em; color: red;">-->
+    <!--<p>MY ACCOUNT</p>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div><!--Panel-->
+        <ul class="nav nav-tabs" style="justify-content: space-around; display: flex">
+            <li class="active"><a aria-expanded="true" href="#tab-1"
+                                  data-toggle="tab"><span>Sign up</span></a></li>
+            <li><a href="#tab-2" data-toggle="tab"><span>Sgin in</span></a></li>
+            <li><a href="#tab-3" data-toggle="tab"><span>Forgot my login and password</span></a></li>
+            <li style="margin-left: auto">
+                <div  class="myaccount-tab-icon"><span class="fa fa-user-o" style="font-size: 2em"></span></div>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <style>
+                .panel,
+                .panel-default {
+                    border: none;
+                    background-color: #C2C5C1;
+                }
+            </style>
+            <div class="tab-pane fade active in" id="tab-1"><!--Sign up-->
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="create-account" method="post"><!--Sign up form-->
+                                <div class="form-group">
+                                    <label for="newusername">* Username</label>
+                                    <input type="text" required="required" id="newusername" name="username"
+                                           class="form-control"/>
+                                    <p style="color: #828282;">Please enter a username more then 5 characters</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">* Email</label>
+                                    <input type="email" required="required" id="email" name="email"
+                                           class="form-control"/>
+                                    <p style="color: #828282;">Your email</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create new account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Sign up-->
+
+            <div class="tab-pane fade" id="tab-2"><!--Sign in-->
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="login" method="post"><!--Login form-->
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" required="required" id="username" name="username"
+                                           class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" required="required" id="password" name="password"
+                                           class="form-control"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Sign in-->
+
+            <div class="tab-pane fade" id="tab-3"><!--Cant remmenber password-->
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="login" method="post"><!--Login form-->
+                                <div class="form-group">
+                                    <label for="oldemail">Email</label>
+                                    <input type="password" required="required" id="oldemail" name="email"
+                                           class="form-control"/>
+                                    <p style="color: #828282;">Enter your email and we will send recovery message to
+                                        your account</p>
+
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send message to my email</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Cant remmenber password-->
+        </div>
+    </div><!--/Panel-->
+
+</div>
+
+<div th:replace="layout::script"/>
+</body>
+</html>

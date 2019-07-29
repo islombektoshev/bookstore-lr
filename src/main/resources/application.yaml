@@ -1,0 +1,29 @@
+server:
+  port: 8082
+  address: 192.168.43.88
+
+
+
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:9999/bookstoredatabase
+    username: root
+    password: MyNewPass
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+logging:
+  level: debug
+
+
+
